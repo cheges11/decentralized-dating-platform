@@ -1,0 +1,20 @@
+[project]
+name = "dating-platform"
+description = "A decentralized dating platform on Stacks blockchain"
+authors = ["Your Name <your.email@example.com>"]
+telemetry = false
+cache_dir = "./.clarinet"
+requirements = []
+boot_contracts = []
+
+[contracts.dating-platform]
+path = "contracts/dating-platform.clar"
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
